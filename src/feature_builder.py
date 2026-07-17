@@ -150,3 +150,12 @@ def build_features(home_team, away_team, tournament, is_neutral):
     }
 
     return pd.DataFrame([features])
+
+
+
+
+def get_all_teams():
+    """
+    Returns a sorted list of all available national teams.
+    """
+    return sorted(player_df["country"].unique().tolist())
