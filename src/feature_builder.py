@@ -135,6 +135,8 @@ def build_features(home_team, away_team, tournament, is_neutral):
 
         "is_neutral": int(is_neutral),
 
+        "is_world_cup": int(tournament == "FIFA World Cup"),
+
         "is_continental": int(
             tournament in [
                 "UEFA Euro",
@@ -144,6 +146,7 @@ def build_features(home_team, away_team, tournament, is_neutral):
                 "CONCACAF Gold Cup"
             ]
         )
+
     }
 
     return pd.DataFrame([features])
